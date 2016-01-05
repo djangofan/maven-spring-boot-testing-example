@@ -1,0 +1,1 @@
+filtered.build.profile.name=${build.profile.name}
