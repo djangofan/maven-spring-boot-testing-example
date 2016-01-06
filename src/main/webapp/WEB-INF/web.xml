@@ -5,7 +5,7 @@
 		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
-    <display-name>spring-mvc-testing-example</display-name>
+    <display-name>maven-spring-boot-testing-example</display-name>
 
     <servlet>
         <servlet-name>mvc-dispatcher</servlet-name>

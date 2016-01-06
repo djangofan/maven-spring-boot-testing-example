@@ -9,7 +9,7 @@
 	http://www.springframework.org/schema/mvc
 	http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
 
-    <context:component-scan base-package="example.spring.bootapp.controller" />
+    <context:component-scan base-package="example.spring.bootapp" />
 
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix">

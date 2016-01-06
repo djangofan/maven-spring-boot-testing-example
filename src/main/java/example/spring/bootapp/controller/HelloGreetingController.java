@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 
 @RestController
-public class HelloGreettingController
+public class HelloGreetingController
 {
     @RequestMapping(path={"/hello"}, method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody

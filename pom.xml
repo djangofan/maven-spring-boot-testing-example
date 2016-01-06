@@ -9,6 +9,7 @@
     <properties>
         <target.jdk>1.7</target.jdk>
         <surefire.version>2.19</surefire.version>
+        <hostName>localhost</hostName>
     </properties>
     <profiles>
         <profile>
@@ -125,8 +126,10 @@
                                 <configuration>
                                     <arguments>
                                         <argument>--server.port=${tomcat.http.port}</argument>
+                                        <argument>-DhostName=${hostName}</argument>
+                                        <argument>-DcontextName=${project.artifactId}</argument>
                                     </arguments>
-                                    <jvmArguments>-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005</jvmArguments>
+                                    <!-- <jvmArguments>-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005</jvmArguments> -->
                                 </configuration>
                             </execution>
                             <execution>
