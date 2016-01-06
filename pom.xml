@@ -126,8 +126,6 @@
                                 <configuration>
                                     <arguments>
                                         <argument>--server.port=${tomcat.http.port}</argument>
-                                        <argument>-DhostName=${hostName}</argument>
-                                        <argument>-DcontextName=${project.artifactId}</argument>
                                     </arguments>
                                     <!-- <jvmArguments>-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005</jvmArguments> -->
                                 </configuration>
@@ -219,7 +217,9 @@
                 <version>${surefire.version}</version>
                 <configuration>
                     <systemPropertyVariables>
-                        <test.server.port>${tomcat.http.port}</test.server.port>
+                        <tomcatPort>${tomcat.http.port}</tomcatPort>
+                        <hostName>${hostName}</hostName>
+                        <contextPath>${project.artifactId}</contextPath>
                     </systemPropertyVariables>
                 </configuration>
                 <executions>
@@ -315,33 +315,6 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-        <!--
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>4.2.2.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>4.2.2.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>4.2.2.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>4.2.2.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-aspects</artifactId>
-            <version>3.1.0.RELEASE</version>
-        </dependency>
-        -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
