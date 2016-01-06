@@ -1,16 +1,12 @@
 package example.spring.bootapp;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.context.annotation.Configuration;
 import java.util.Arrays;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.ImportResource;
 
 // from https://spring.io/guides/gs/spring-boot/
 @SpringBootApplication
-@Configuration
-@ImportResource("classpath:spring-mvc-config.xml")
 public class Application {
 
     public static void main(String[] args) {
