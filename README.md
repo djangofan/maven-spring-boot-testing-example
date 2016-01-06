@@ -20,6 +20,7 @@ is to verify functional, performance, and reliability requirements placed on maj
 
 # Running just the Integration Tests
 
-NOTE: The integration tests start a Tomcat on localhost:9090 and runs those tests against that server instance.
+NOTE: The integration-test phase will start a Tomcat on localhost, using a random port, and runs the tests against
+that server instance.
 
 1. Using Maven, run 'mvn clean verify -Pintegration-test'
