@@ -1,7 +1,6 @@
 package example.spring.bootapp;
 
 import org.junit.Before;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -9,15 +8,15 @@ public class IntegrationTestBase
 {
     protected String tomcatPort;
     protected String hostName;
-    protected String contextName;
+    protected String contextPath;
     protected URL testUrl = null;
 
     @Before
     public void setUp() throws InterruptedException
     {
-        tomcatPort = System.getProperty("tomcatPort", "8080");
-        hostName = System.getProperty("hostName", "localhost");
-        contextName = System.getProperty("contextName", "maven-spring-boot-testing-example");
+        tomcatPort = System.getProperty("tomcatPort");
+        hostName = System.getProperty("hostName");
+        contextPath = System.getProperty("contextPath");
         Thread.sleep(1000);
     }
 

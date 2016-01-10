@@ -11,10 +11,10 @@ public class IT_HelloGreetingApiIntegrationTest extends IntegrationTestBase
     @Test
     public void integrationTestHelloGreeting()
     {
-        testUrl = getURLFromString("http://" + hostName + ":" + tomcatPort + "/" + contextName + "/hello");
+        testUrl = getURLFromString("http://" + hostName + ":" + tomcatPort + "/" + contextPath + "/hello");
 
         String greetingMessage = with().header(new Header("Content-Type", "application/json; charset=UTF-8"))
-                .log().all()
+                .expect().log().all()
                 .when().get(testUrl.toString())
                 .then().statusCode(200)
                 .extract().path("greeting");

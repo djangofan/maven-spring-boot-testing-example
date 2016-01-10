@@ -5,7 +5,7 @@ import java.util.Arrays;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-// from https://spring.io/guides/gs/spring-boot/
+// source code example came from https://spring.io/guides/gs/spring-boot/
 @SpringBootApplication
 public class Application {
 
