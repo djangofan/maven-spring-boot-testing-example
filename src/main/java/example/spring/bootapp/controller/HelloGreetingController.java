@@ -12,7 +12,7 @@ public class HelloGreetingController
 {
     @RequestMapping(path={"/hello"}, method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-	protected HashMap<String, String> displayHelloWorldMessage()
+	protected HashMap<String, String> displayHelloGreetingMessage()
     {
         HashMap<String, String> model = new HashMap<>();
         String name = "Hello Greeting!!";

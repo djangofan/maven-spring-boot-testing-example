@@ -12,7 +12,7 @@ public class IndexGreetingController
 {
     @RequestMapping(path={"/index", "/"}, method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-	protected HashMap<String, String> displayIndexMessage()
+	protected HashMap<String, String> displayIndexGreetingMessage()
     {
         HashMap<String, String> model = new HashMap<>();
         String name = "Index Greeting";
